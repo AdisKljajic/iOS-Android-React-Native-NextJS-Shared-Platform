@@ -6,6 +6,7 @@
  */
 
 import React from 'react';
+import { Image } from 'react-native';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -76,6 +77,15 @@ function App(): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+            <Section title="React Native With NextJS">
+                <View>
+                <Image
+                    source={require('./tempMedia/Renex.png')}
+                    style={styles.renex}
+                    resizeMode="contain"
+                ></Image>
+                </View>
+            </Section>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
@@ -100,6 +110,12 @@ const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
+  },
+  renex: {
+    width: 180,
+    height: 180,
+    alignSelf: 'center',  // This will center the logo horizontally
+    marginTop: '25%',     // Optional for vertical spacing
   },
   sectionTitle: {
     fontSize: 24,
