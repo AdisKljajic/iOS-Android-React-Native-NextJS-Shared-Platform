@@ -1,3 +1,11 @@
 {
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+    "paths": {
+      "app/*": ["./packages/app/*"]
+    },
+    "jsx": "react-jsx"
+  },
   "extends": "@react-native/typescript-config/tsconfig.json"
 }
